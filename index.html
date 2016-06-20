@@ -2,24 +2,25 @@
 <html>
   <head>
      <meta charset="utf-8">
-     <title>INTITA_WORK</title>
-     <script type="text/javascript" src="js/jquery-1.js"></script>
-     <script type="text/javascript" src="js/jquery_002.js"></script>
-	 <script type="text/javascript" src="js/jquery.js"></script>
-	 <script type="text/javascript" src="js/jquery_003.js"></script>
-	 <script async="" src="js/jquery_004.js"></script>
-	 <script type="text/javascript" src="js/hamburgermenu.js"></script>
+     <title>INTITA</title>
+     <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+
      <link rel="stylesheet" href="styles/fontface.css">
    	 <link rel="stylesheet" type="text/css" href="styles/style.css">
 	 <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css">
      <link rel="stylesheet" type="text/css" href="styles/hamburgerMenu.css">
-
      <link rel="stylesheet" type="text/css" href="styles/slider.css">
-     <script type="text/javascript" src="js/slider.js"></script>
-     <link rel="stylesheet" href="styles/owl.css">
-     <link rel="stylesheet" href="styles/owl_002.css">
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="styles/owl.carousel.css">
+
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="styles/owl.theme.css">
+
+    <!-- Include js plugin -->
+    <script src="js/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
      <link rel="stylesheet" href="styles/fontface.css">
-     <script type="text/javascript" src="js/owl.js"></script>
      <link rel="stylesheet" href="styles/step.css">
      <link rel="stylesheet" type="text/css" href="styles/aboutusstyles.css">
      <link rel="stylesheet" href="styles/regform.css">
@@ -32,28 +33,30 @@
 		<div id="main-wrapper">
 		    <div id="mainheader">
 		        <!-- Hamburger menu -->
-							<div style="display: block;" id="hambNav">
-							    <div id="hambButton">
-							        <img src="images/hamburger.png">
-							    </div>
-							    <div style="display: none; overflow-y: visible; height: inherit;" id="hambMenu">
-							        <a href="http://intita.com/" class="logo">
-							            <img src="images/hamburgerlogo.png">
-							        </a>
-							        <ul class="menulist">
-							            <li><a href="http://intita.com/courses">Курси</a></li>
-							            <li><a href="http://intita.com/teachers">Викладачі</a></li>
-							            <li><a href="http://intita.com/graduate">Випускники</a></li>
-							            <li><a href="http://intita.com/">Онлайн</a></li>
-							            <li><a href="http://intita.com/aboutus">Про нас</a></li>
-							        </ul>
-							        <div class="humundline"></div>
-							        <a id="hum_button" onclick="openSignIn();">Почати</a>    </div>
-							</div>        <div class="downmain" id="headerUnderline">
-							            <div id="navigation" class="">
+				<div style="display: none;" id="hambNav">
+				    <div id="hambButton">
+				        <img src="images/hamburger.png">
+				    </div>
+				    <div style="display: none; " id="hambMenu">
+				        <a href="index.html" class="logo">
+				            <img src="images/hamburgerlogo.png">
+				        </a>
+				        <ul class="menulist">
+				            <li><a href="courses.html">Курси</a></li>
+				            <li><a href="teachers.html">Викладачі</a></li>
+				            <li><a href="graduate.html">Випускники</a></li>
+				            <li><a href="index.html">Онлайн</a></li>
+				            <li><a href="aboutus.html">Про нас</a></li>
+				        </ul>
+				        <div class="humundline"></div>
+				        <a id="hum_button" href="#form">Почати</a>
+				    </div>
+				</div>
+			    <div class="downmain" id="headerUnderline">
+		            <div id="navigation" class="">
 		                <div class="main">
 		                    <div id="logo_img" class="">
-		                        <a href="http://intita.com/">
+		                        <a href="index.html">
 		                            <img id="logo" src="images/Logo_bigUA.png">
 		                        </a>
 		                    </div>
@@ -61,22 +64,22 @@
 		                    <div class="" id="enterButton">
 		                        <div id="button_border" class="">
 		                        </div>
-		                        <a id="enter_button" class="" onclick="openSignIn();">Почати</a>
+		                        <a id="enter_button" href="#form">Почати</a>
 		                    </div>
 		                    <div id="menulist">
 		                        <ul>
 		                            <li>
-		                                <a href="http://intita.com/courses">Курси</a>
+		                                <a href="courses.html">Курси</a>
 		                            </li>
 		                            <li>
-		                                <a href="http://intita.com/teachers">Викладачі</a>
+		                                <a href="teachers.html">Викладачі</a>
 		                            </li>
 		                            <li>
-		                                <a href="http://intita.com/graduate">Випускники</a>
+		                                <a href="graduate.html">Випускники</a>
 		                            </li>
-		                            <li><a href="http://intita.com/">Онлайн</a></li>
+		                            <li><a href="index.html">Онлайн</a></li>
 		                            <li>
-		                                <a href="http://intita.com/aboutus">Про нас</a>
+		                                <a href="aboutus.html">Про нас</a>
 		                            </li>
 		                        </ul>
 		                    </div>
@@ -95,7 +98,7 @@
 			<!--? $css_version = 1; ?-->
 
 
-				<link type="text/css" rel="stylesheet" href="INTITA_files/step.css">
+				<link type="text/css" rel="stylesheet" href="styles/step.css">
 
 				<!-- carousel-plugins -->
 
@@ -124,95 +127,29 @@
 				        </div>
 				    </div>
 				</div>
-				<div style="opacity: 1; display: block;" id="slider" class="owl-carousel owl-theme">
-		            <div class="owl-wrapper-outer">
-		                <div style="width: 18886px; left: 0px; display: block; transition: all 2000ms ease 0s; transform: translate3d(-2698px, 0px, 0px);" class="owl-wrapper">
-		                 	<div style="width: 1349px; height: 618.807px;" class="owl-item">
-		                 	 	<div class="slide">
-		            				<div>
-		              					<p style="width: 1349px; top: 334.833px;">Ми гарантуємо Тобі отримання пропозиції працевлаштування<br>
-																					після успішного завершення навчання!</p>
-							                <img src="images/1.jpg">
-							        </div>
-							    </div>
-							</div>
-							<div style="width: 1349px; height: 618.807px;" class="owl-item">
-								<div class="slide">
-							    	<div>
-							       		<p style="width: 1349px; top: 334.833px;">Не упусти свій шанс змінити світ - отримай якісну та сучасну освіту<br>
-																					і стань класним спеціалістом!</p>
-							                <img src="images/2.jpg">
-							        </div>
-							    </div>
-							</div>
-							<div style="width: 1349px; height: 618.807px;" class="owl-item">
-								<div class="slide">
-							        <div>
-							            <p style="width: 1349px; top: 334.833px;">Хочеш стати висококласним спеціалістом? Приймай вірне рішення - навчайся з нами!
-							            <br> Ми працюємо на результат!</p>
-							                <img src="images/3.jpg">
-							        </div>
-							    </div>
-							</div>
-							<div style="width: 1349px; height: 618.807px;" class="owl-item">
-							<div class="slide">
-							    <div>
-							        <p style="width: 1349px; top: 334.833px;">Не втрачай шансу на творчу, цікаву та перспективну працю –<br> плануй своє професійне майбутнє вже сьогодні!</p>
-							            <img src="images/4.jpg">
-						        </div>
-						    </div></div>
-						    <div style="width: 1349px; height: 618.807px;" class="owl-item">
-						    <div class="slide">
-							    <div>
-							        <p style="width: 1349px; top: 334.833px;">Один рік цікавого навчання - і ти станеш гарним програмістом<br>
-									готовим працювати в індустрії інформаційних технологій!</p>
-							        <img src="images/9.jpg">
-							    </div>
-							</div></div>
-							<div style="width: 1349px; height: 618.807px;" class="owl-item">
-							<div class="slide">
-							    <div>
-							        <p style="width: 1349px; top: 334.833px;">Мрієш заробляти улюбленою справою і отримувати задоволення від професії?<br> Скористайся можливістю потрапити у світ інформаційних технологій!</p>
-							        <img src="images/10.jpg">
-							    </div>
-							    </div>
-							</div>
-							<div style="width: 1349px; height: 618.807px;" class="owl-item">
-							<div class="slide">
-							    <div>
-							        <p style="width: 1349px; top: 334.833px;">В майбутньому буде два типи робіт: ті - де Ти будеш керувати комп'ютером - програмувати <br> і ті - де машини вказуватимуть що робити Тобі!</p>
-							        <img src="images/5.jpg">
-							    </div>
-		        			</div>
-		        		</div>
-		        	</div>
-		        </div>
+				<div id="owl-slider" class="owl-carousel">
 
-					<div style="margin-left: 0px; left: 5%; width: auto;" class="owl-controls clickable">
-					    <div class="owl-pagination">
-					   		 <div class="owl-page">
-					  		  <span class=""></span>
-					    </div>
-					    <div class="owl-page">
-					    	<span class=""></span>
-					    </div>
-					    <div class="owl-page">
-					    	<span class=""></span>
-					    </div>
-					    <div class="owl-page">
-					    	<span class=""></span>
-					    </div>
-					    <div class="owl-page">
-					    	<span class=""></span>
-					    </div>
-					    <div class="owl-page active">
-					    	<span class=""></span>
-					    </div>
-					    <div class="owl-page">
-					    	<span class=""></span>
-					    </div>
-					    </div>
-					</div>
+		            <div><img src="images/1.jpg">
+		            <p style="width: 1335px; top: 332.5px;">Ми гарантуємо Тобі отримання пропозиції працевлаштування<br>
+					після успішного завершення навчання!</p></div>
+		            <div><img src="images/2.jpg">
+		            <p style="width: 1335px; top: 332.5px;">Не упусти свій шанс змінити світ - отримай якісну та сучасну освіту<br>
+					і стань класним спеціалістом!</p></div>
+		            <div><img src="images/3.jpg">
+		            <p style="width: 1335px; top: 332.5px;">Хочеш стати висококласним спеціалістом? Приймай вірне рішення - навчайся з нами!<br>
+					Ми працюємо на результат!</p></div>
+		            <div><img src="images/4.jpg">
+		            <p style="width: 1335px; top: 332.5px;">Не втрачай шансу на творчу, цікаву та перспективну працю –<br> плануй своє професійне майбутнє вже сьогодні!</p>
+		            </div>
+		            <div><img src="images/5.jpg">
+					<p style="width: 1335px; top: 332.5px;">Один рік цікавого навчання - і ти станеш гарним програмістом<br>готовим працювати в індустрії інформаційних технологій!</p>
+		            </div>
+		            <div><img src="images/6.jpg">
+		            <p style="width: 1335px; top: 332.5px;">Мрієш заробляти улюбленою справою і отримувати задоволення від професії?<br> Скористайся можливістю потрапити у світ інформаційних технологій!</p>
+		            </div>
+		            <div><img src="images/7.jpg">
+		            <p style="width: 1335px; top: 332.5px;">В майбутньому буде два типи робіт: ті - де Ти будеш керувати комп'ютером - програмувати <br> і ті - де машини вказуватимуть що робити Тобі!</p></div>
+
 				</div>
 		<div style="height: 89px; width: 1335px; margin-top: -2.55%;" class="mouseLine">
 		    <a id="mouseLine" href="#form">
@@ -222,79 +159,79 @@
 
 		<div class="mainAboutBlock">
 		    <div class="mainAbout">
-		        <div class="header">
-		            Про нас            <p>
-		                Важлива інформація про навчання разом з нами            </p>
+		        <div class="header">Про нас
+		        	<p>Важлива інформація про навчання разом з нами</p>
 		        </div>
-
 		        <div class="line1">
 		            <img src="images/line1.png">
 		        </div>
-
 		        <div id="steps_list" class="list-view">
-		<div class="summary"></div>
-
-		<div class="items">
-		<div class="block">
-		    <ul>
-		        <li>
-		            <div class="icon">
-		                <img src="images/image1.png">
-		            </div>
-		            <div class="title">
-		                Про що мрієш ти?                <p>
-		                    Можливо, це свобода жити
-								своїм життям? Самостійно керувати
-								власним часом з можливістю
-								заробляти, улюбленою справою
-								і отримувати задоволення
-								від сучасної професії?                </p>
-		            </div>
-		            <a href="http://intita.com/aboutus/1/">
-		                детальніше ...            </a>
-		        </li>
-		    </ul>
-		</div><div class="block">
-		    <ul>
-		        <li>
-		            <div class="icon">
-		                <img src="images/image2.png">
-		            </div>
-		            <div class="title">
-		                Навчання майбутнього                <p>
-		                    На відміну від традиційних
-								закладів, ми навчаємо
-								не задля оцінок. Ми працюємо
-								індивідуально з кожним
-								студентом, щоб досягти 100%
-								засвоєння необхідних знань.                </p>
-		            </div>
-		            <a href="http://intita.com/aboutus/2/">
-		                детальніше ...            </a>
-		        </li>
-		    </ul>
-		</div><div class="block">
-		    <ul>
-		        <li>
-		            <div class="icon">
-		                <img src="images/image3.png">
-		            </div>
-		            <div class="title">
-		                Важливі питання                <p>
-		                    Ми пропонуємо кожному
-								нашому випускнику гарантоване
-								отримання пропозиції
-								працевлаштування протягом 4-6-ти
-								місяців після успішного
-								завершення навчання.                </p>
-		            </div>
-		            <a href="http://intita.com/aboutus/3/">
-		                детальніше ...            </a>
-		        </li>
-		    </ul>
-		</div></div>
-		<div class="keys" style="display:none" title="/"><span>1</span><span>2</span><span>3</span></div>
-		</div>    </div>
+					<div class="summary"></div>
+					<div class="items">
+						<div class="block">
+						    <ul>
+						        <li>
+						            <div class="icon">
+						                <img src="images/image1.png">
+						            </div>
+						            <div class="title">
+						                Про що мрієш ти?                <p>
+						                    Можливо, це свобода жити
+												своїм життям? Самостійно керувати
+												власним часом з можливістю
+												заробляти, улюбленою справою
+												і отримувати задоволення
+												від сучасної професії?                </p>
+						            </div>
+						            <a href="http://intita.com/aboutus/1/">
+						                детальніше ...            </a>
+						        </li>
+						    </ul>
+						</div>
+						<div class="block">
+						    <ul>
+						        <li>
+						            <div class="icon">
+						                <img src="images/image2.png">
+						            </div>
+						            <div class="title">
+						                Навчання майбутнього                <p>
+						                    На відміну від традиційних
+												закладів, ми навчаємо
+												не задля оцінок. Ми працюємо
+												індивідуально з кожним
+												студентом, щоб досягти 100%
+												засвоєння необхідних знань.                </p>
+						            </div>
+						            <a href="http://intita.com/aboutus/2/">
+						                детальніше ...            </a>
+						        </li>
+						    </ul>
+						</div>
+						<div class="block">
+						    <ul>
+						        <li>
+						            <div class="icon">
+						                <img src="images/image3.png">
+						            </div>
+						            <div class="title">
+						                Важливі питання                <p>
+						                    Ми пропонуємо кожному
+												нашому випускнику гарантоване
+												отримання пропозиції
+												працевлаштування протягом 4-6-ти
+												місяців після успішного
+												завершення навчання.                </p>
+						            </div>
+						            <a href="http://intita.com/aboutus/3/">
+						                детальніше ...            </a>
+						        </li>
+						    </ul>
+						</div>
+					</div>
+					<div class="keys" style="display:none" title="/"><span>1</span><span>2</span><span>3</span></div>
+				</div>
+			</div>
 		</div>
 		<div class="steps">
 		    <div class="stepHeaderCont" style="width:958px">
@@ -303,58 +240,56 @@
 		            <h3>П’ять кроків до здійснення твоїх мрій</h3>
 		        </div>
 		    </div>
-	<div id="steps_list" class="list-view">
-		<div class="summary"></div>
-
-		<div class="items">
-		    <div class="stepLeft" style="width:958px">
-		        <div class="stepUrl">
-		            <img class="grid" src="images/grid.png">
-		            <img src="images/step1.jpg">
-		        </div>
-		        <div class="line">
-		        </div>
-
-		        <img class="hexagon" src="images/hexagon.png">
-		        <div class="stepArticle">
-		            <p class="stepNumber">1</p>
-		            <p class="stepName">крок</p>
-		        </div>
-		        <div class="stepInfo" style="min-height:220.34px ">
-		            <h2>Реєстрація на сайті</h2>
-		            <p>Щоб отримати доступ до курсів та пройти безкоштовні
-							модулі і заняття зареєструйся на сайті. Реєстрація дозволить тобі
-							оцінити якість та зручність нашого продукту, який стане для тебе
-							надійним партнером і порадником в професійній самореалізації.</p>
-		        </div>
-		    </div>
-		    <div class="stepRight" style="width:958px">
-		        <div class="stepUrl">
-		            <img class="grid" src="images/grid.png">
-		            <img src="images/step2.jpg">
-		        </div>
-		        <div class="line">
-		        </div>
-		        <img class="hexagon" src="images/hexagon.png">
-		        <div class="stepArticle">
-		            <p class="stepNumber">2</p>
-		            <p class="stepName">крок</p>
-		        </div>
-		        <div class="stepInfo">
-		            <h2>Вибір курсу чи модуля</h2>
-		            <p>Щоб стати спеціалістом певного напрямку та рівня
-						(отримати професійну спеціалізацію), вибери для проходження відповідний
-						курс. Якщо Тебе цікавить виключно поглиблення знань в певному напрямку
-						інформаційних технологій, то вибери відповідний модуль для проходження.</p>
-		        </div>
-		    </div>
+			<div id="steps_list" class="list-view">
+				<div class="summary"></div>
+				<div class="items">
+		    		<div class="stepLeft" style="width:958px">
+		        		<div class="stepUrl">
+		            		<img class="grid" src="images/grid.png">
+		            		<img src="images/step1.jpg">
+		       			</div>
+		        		<div class="line">
+		       			</div>
+						<img class="hexagon" src="images/hexagon.png">
+					        <div class="stepArticle">
+					            <p class="stepNumber">1</p>
+					            <p class="stepName">крок</p>
+					        </div>
+				        	<div class="stepInfo" style="min-height:220.34px ">
+						            <h2>Реєстрація на сайті</h2>
+						            <p>Щоб отримати доступ до курсів та пройти безкоштовні
+											модулі і заняття зареєструйся на сайті. Реєстрація дозволить тобі
+											оцінити якість та зручність нашого продукту, який стане для тебе
+											надійним партнером і порадником в професійній самореалізації.</p>
+				        	</div>
+				    </div>
+				    <div class="stepRight" style="width:958px">
+				        <div class="stepUrl">
+				            <img class="grid" src="images/grid.png">
+				            <img src="images/step2.jpg">
+				        </div>
+				        <div class="line">
+				        </div>
+				        <img class="hexagon" src="images/hexagon.png">
+					        <div class="stepArticle">
+					            <p class="stepNumber">2</p>
+					            <p class="stepName">крок</p>
+					        </div>
+					        <div class="stepInfo">
+						            <h2>Вибір курсу чи модуля</h2>
+						            <p>Щоб стати спеціалістом певного напрямку та рівня
+										(отримати професійну спеціалізацію), вибери для проходження відповідний
+										курс. Якщо Тебе цікавить виключно поглиблення знань в певному напрямку
+										інформаційних технологій, то вибери відповідний модуль для проходження.</p>
+					        </div>
+				    </div>
 		    <div class="stepLeft" style="width:958px">
 		        <div class="stepUrl">
 		            <img class="grid" src="images/grid.png">
 		            <img src="images/step3.jpg">
 		        </div>
-		        <div class="line">
-		        </div>
+	        			<div class="line">
+		        		</div>
 
 		        <img class="hexagon" src="images/hexagon.png">
 		        <div class="stepArticle">
@@ -474,7 +409,7 @@
 
             <div class="centerfooter">
                 <div class="footerlogo">
-                    <a href="http://intita.com/">
+                    <a href="index.html">
                         <img src="images/Logo_small.png">
                     </a>
                 </div>
@@ -489,19 +424,19 @@
                 <div class="footermenu">
                     <ul>
                         <li>
-                            <a href="http://intita.com/courses">Курси</a>
+                            <a href="courses.html">Курси</a>
                         </li>
                         <li>
-                            <a href="http://intita.com/teachers">Викладачі</a>
+                            <a href="teachers.html">Викладачі</a>
                         </li>
                         <li>
-                            <a href="http://intita.com/graduate">Випускники</a>
+                            <a href="graduate.html">Випускники</a>
                         </li>
                         <li>
-                            <a href="http://intita.com/">Онлайн></a>
+                            <a href="index.html">Онлайн</a>
                             </li>
                         <li>
-                            <a href="http://intita.com/aboutus">Про нас</a>
+                            <a href="aboutus.html">Про нас</a>
                         </li>
                     </ul>
                 </div>
@@ -512,4 +447,10 @@
         </div>
     </div>
 </div>
-
+<div id = "rocket">
+	<img src = "images/rocket.png"></img>
+</div>
+<div id="exhaust">
+    <img src="images/exhaust.png">
+</div>
+</body>
