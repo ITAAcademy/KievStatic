@@ -246,7 +246,8 @@ p{
 #mainfooter div.footerlogo{margin-left:20px;vertical-align:top;}
 #mainfooter div.footercontact{display:inline-block;position:relative;width:200px;height:80px;}
 #mainfooter .footercontact p{position:absolute;left:0;bottom:0;line-height:14px;margin:0;margin-left:15px;font-size:0.8em;color:#114988;}
-.footermenu{display:inline-block;position:relative;float:right;max-width:450px;font-size:1em;margin-top:5px;}
+.footermenu{display:inline-block;position:relative;float:right;max-width:470px;font-size:1em;margin-top:5px;}
+.footerButton{display:inline-block;position:relative;float:right;max-width:500px;font-size:1em;margin-top:5px;}
 #mainfooter .footermenu ul{margin-top:10px;margin-left:0;padding-left:0;}
 #mainfooter .footermenu li{display:inline;padding:8px;}
 #mainfooter .footermenu li a{text-decoration:none;font-family:"MyriadPro";font-size:15px;color:#336699;}
@@ -295,6 +296,17 @@ div#exhaust{display:none;position:absolute;z-index:2000;}
 #sharing .share42-counter{display:block;margin:0;padding:0;text-align:center;background:#FFF;border:1px solid #d1d1d1;border-top:none;border-radius:0 0 5px 5px;height:20px;line-height:20px;}
 #sharing .share42-counter:before{background:none;}
 #module-grid .grid-view table.items td{width:100px;}
+
+.button {
+    background-color: #4b75a4;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.text-white {
+    color: white;
+}
+
 #emailVerification-form {
     margin: 50px auto;
     width: 540px;
