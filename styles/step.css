@@ -1,6 +1,11 @@
 html{font-family:"MyriadPro";}
 .stepHeader h1{color:#5b5b5b;margin:0px;font-weight:normal;}
-.stepHeader h3{color:#4b75a4;margin-top:-6px;margin-bottom:0px;font-weight:normal;}
+.stepHeader h3 {
+    color: #4b75a4;
+    margin-top: -1px;
+    margin-bottom: 4px;
+    font-weight: normal;
+}
 .stepHeaderCont{margin:0px auto;margin-bottom:60px;}
 .stepHeader{text-align:center;margin:0px auto;border-bottom:2px solid #4b75a4;padding:0 30px 5px 30px;display:table;}
 .steps{font-size:100%;margin-top:0px;}
