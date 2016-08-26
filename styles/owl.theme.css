@@ -3,9 +3,13 @@
 *	v1.3.3
 */
 
+
 .owl-theme .owl-controls{
-	margin-top: 10px;
+	margin-top: 0px;
 	text-align: center;
+	margin-left: 0px;
+	left: 6%;
+
 }
 
 /* Styling Next and Prev buttons */
