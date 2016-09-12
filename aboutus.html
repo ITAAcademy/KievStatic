@@ -25,6 +25,22 @@
 
 </head>
 <body>
+
+<div id="sharing">
+    <div class="share42init"
+         data-top1="75"
+         data-top2="110"
+         data-margin="15"
+         data-url="http://intita.com"
+         data-title="INTITA - ПРОГРАМУЙ МАЙБУТНЄ!"
+         data-image="https://intita.com/images/mainpage/intitaLogo.jpg"
+         data-description="Хочеш стати висококласним спеціалістом? Приймай вірне рішення - навчайся разом з нами! Ми працюємо на результат!"
+         data-path="https://intita.com/scripts/share42/"
+         data-zero-counter="1">
+    </div>
+</div>
+<script type="text/javascript" src="http://intita.com/scripts/share42/share42.js"></script>
+
 <div id="main-wrapper">
     <div id="mainheader">
         <!-- Hamburger menu -->
@@ -228,7 +244,7 @@
                     <img src="images/line1.png">
                     <div id="anchorAboutUs"></div>
                 </div>
-                <div class="block selectedTab" id="firstblock" onclick="showAboutUs('1',this)">
+                <div class="block selectedTab" id="firstblock" onclick="showTab(0)">
                     <ul>
                         <li>
                             <div class="icon">
@@ -242,7 +258,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block" id="secondblock" onclick="showAboutUs('2',this)">
+                <div class="block" id="secondblock" onclick="showTab(1)">
                     <ul>
                         <li>
                             <div class="icon">
@@ -256,7 +272,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block" id="threeblock" onclick="showAboutUs('3',this)">
+                <div class="block" id="threeblock" onclick="showTab(2)">
                     <ul>
                         <li>
                             <div class="icon">
@@ -270,77 +286,11 @@
                         </li>
                     </ul>
                 </div>
-                <script type="text/javascript">
-                    var width = 0;
-                    if (self.screen) {
-                        width = screen.width
-                    }
-                    function centerPage() {
-                        $('.contentCenterBox').css({
-                            width: width,
-                            left: "50%",
-                            'margin-left': -width / 2
-                        });
-                    }
-                    function Window() {
-                        $('#dropTextLayer1').css('display', 'inline-block');
-                    }
-                    function WindowShow(buttonNumber, anchor) {
-                        if (anchor == 1) {
-                            $("body").animate({"scrollTop": 440}, "fast");
-                        }
-                        if (buttonNumber == 1) {
-                            $('#dropTextLayer1').css('display', 'inline-block');
-                            $('#dropTextLayer2').css('display', 'none');
-                            $('#dropTextLayer3').css('display', 'none');
-                            $('#firstblock').addClass('selectedTab');
-                        }
-                        if (buttonNumber == 2) {
-                            $('#dropTextLayer2').css('display', 'inline-block');
-                            $('#dropTextLayer1').css('display', 'none');
-                            $('#dropTextLayer3').css('display', 'none');
-                            $('#secondblock').addClass('selectedTab');
-                        }
-                        if (buttonNumber == 3) {
-                            $('#dropTextLayer3').css('display', 'inline-block');
-                            $('#dropTextLayer2').css('display', 'none');
-                            $('#dropTextLayer1').css('display', 'none');
-                            $('#threeblock').addClass('selectedTab');
-                        }
-                    }
-
-                    function showAboutUs(buttonNumber, block) {
-                        if (buttonNumber == 1) {
-                            $('#dropTextLayer1').css('display', 'inline-block');
-                            $('#dropTextLayer2').css('display', 'none');
-                            $('#dropTextLayer3').css('display', 'none');
-                            $('.block').removeClass('selectedTab');
-                            $(block).addClass('selectedTab');
-                            $('body,html').animate({scrollTop: $("#anchorAboutUs").offset().top}, 400);
-                        }
-                        if (buttonNumber == 2) {
-                            $('#dropTextLayer2').css('display', 'inline-block');
-                            $('#dropTextLayer1').css('display', 'none');
-                            $('#dropTextLayer3').css('display', 'none');
-                            $('.block').removeClass('selectedTab');
-                            $(block).addClass('selectedTab');
-                            $('body,html').animate({scrollTop: $("#anchorAboutUs").offset().top}, 400);
-                        }
-                        if (buttonNumber == 3) {
-                            $('#dropTextLayer3').css('display', 'inline-block');
-                            $('#dropTextLayer2').css('display', 'none');
-                            $('#dropTextLayer1').css('display', 'none');
-                            $('.block').removeClass('selectedTab');
-                            $(block).addClass('selectedTab');
-                            $('body,html').animate({scrollTop: $("#anchorAboutUs").offset().top}, 400);
-                        }
-                    }
-                </script>
             </div>
         </div>
     </div>
     <div id="aboutDetailMain">
-        <div style="display: inline-block;" id="dropTextLayer1">
+        <div id="dropTextLayer1" class="dropTextLayer inline-block">
             <div class="textBox">
                 <div class="aboutStepBlock">
                     <div style=" " class="oned">
@@ -571,7 +521,7 @@
                 </div>
             </div>
         </div>
-        <div style="display: none;" id="dropTextLayer2">
+        <div id="dropTextLayer2" class="dropTextLayer hide">
 
             <div class="textBox">
                 <div class="tabcolumn">
@@ -931,7 +881,7 @@
 
             </div>
         </div>
-        <div style="display: none;" id="dropTextLayer3">
+        <div id="dropTextLayer3" class="hide dropTextLayer">
             <div class="textBox">
                 <div class="faqBox">
                     <table>
@@ -1154,7 +1104,7 @@
 
             <div class="centerfooter">
                 <div class="footerlogo">
-                    <a href="http://intita.com" target="_blank">
+                    <a href="http://kyiv.intita.com" target="_blank">
                         <img src="images/Logo_small.png">
                     </a>
                 </div>
@@ -1202,3 +1152,32 @@
     <img src="images/exhaust.png">
 </div>
 </body>
+<script>
+
+    function showTab(number) {
+        $('.block').each(function (index, element) {
+            $(element).toggleClass('selectedTab', index == number);
+            if (index == number) {
+                $('body,html').animate({scrollTop: $("#anchorAboutUs").offset().top}, 400);
+            }
+        });
+        $('.dropTextLayer').each(function (index, element) {
+            console.log('DEADBEEF aboutus.html:1165', index, number);
+            $(element).toggleClass('hide', index !== number);
+            $(element).toggleClass('inline-block', index == number);
+        });
+    }
+
+    $(document).ready(function () {
+        if (location.hash) {
+            var hash = location.hash.replace('#', '').split('&').reduce(function (prev, curr){
+                var aux = curr.split('=');
+                prev[aux[0]] = aux[1];
+                return prev;
+            }, {});
+            if (hash.tab) {
+                showTab(hash.tab)
+            }
+        }
+    })
+</script>
